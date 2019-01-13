@@ -6,9 +6,9 @@ class Panel extends React.Component {
     render() {
     return (
             <div className="panel">
-                <h2 class="caption">HOWS THE WEATHER?</h2>
+                <h2 className="caption">HOWS THE WEATHER?</h2>
                 <div className={`card a${this.props.weatherDayOne.icon}`}>
-                    <img src={`/icons/${this.props.weatherDayOne.icon}.png`} alt={`${this.props.weatherDayOne.description}`} className='card-icon'/>
+                    <img src={`/public/icons/${this.props.weatherDayOne.icon}.png`} alt={`${this.props.weatherDayOne.description}`} className='card-icon'/>
                     <h3>{`${this.props.weatherDayOne.description}`}</h3>
                     <p>{`${this.props.dateDayOne}`}</p>
                     <div className='card-row'>
