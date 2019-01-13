@@ -1,0 +1,38 @@
+.search {
+    background-color: #201b2b;
+    padding-top: 40px;
+    height: 200px;
+    width: 100%;
+}
+
+.search-city {
+    display: block;
+    margin: 20px auto;
+    width: 30%;
+    height: 40px;
+    padding: 0 5px;
+}
+
+.search-city:focus {
+    border: 1px solid white;
+}
+
+.search-city,
+.get-weather {
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(223, 195, 223);
+}
+
+.get-weather {
+    width: 10%;
+    height: 30px;
+    transition: ease-in 0.2s;
+}
+
+.get-weather:hover {
+    background-color: rgb(82, 65, 82); 
+    color: white;
+    cursor: pointer;
+}
+

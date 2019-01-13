@@ -1,0 +1,76 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  height: 400px;
+  width: 320px;
+  padding: 15px 25px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.4);
+  position: relative;
+  top: 50%;
+  transition: ease-in 0.4s;
+}
+
+.card>h3,p {
+  margin: 5px 0;
+}
+
+.a01d,
+.a02d,
+.a03d,
+.a04d,
+.a09d,
+.a10d,
+.a11d,
+.a13d,
+.a50d {
+  background: linear-gradient(18deg, rgb(51, 155, 184) 17%, rgba(255,190,0,1) 100%);
+}
+
+.a01n,
+.a02n,
+.a03n,
+.a04n,
+.a09n,
+.a10n,
+.a11n,
+.a13n,
+.a50n {
+  background: linear-gradient(18deg, rgba(182,136,252,1) 0%, rgba(73,43,176,1) 100%); 
+}
+
+.card-icon {
+    padding-top: 15px; 
+    width: 60%;
+}
+
+.card-line {
+  border-bottom: 3.5px solid #fff;
+  width: 100%;
+}
+
+.card-temperature {
+  font-size: 1.5em;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.card-row {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-temperature .small {
+  font-size: .75em;
+}
+
+.card-city {
+  font-size: 1.5em;
+  margin-top: 8px;
+  text-align: left;
+}
