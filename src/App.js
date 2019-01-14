@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Panel from './panel.js';
 import Search from './Search.js';
 import Footer from './Footer.js';
+import './normalize.css';
 import './App.css';
 import './panel.css';
 

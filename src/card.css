@@ -4,13 +4,17 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 8px;
-  height: 400px;
-  width: 320px;
+  height: 95%;
+  width: 95%;
   padding: 15px 25px;
   box-shadow: 0 1px 8px rgba(0,0,0,0.4);
   position: relative;
   top: 50%;
   transition: ease-in 0.4s;
+}
+
+.card:not(:first-of-type) {
+  display: none;
 }
 
 .card>h3,p {
@@ -73,4 +77,36 @@
   font-size: 1.5em;
   margin-top: 8px;
   text-align: left;
+}
+
+@media all and (min-width: 768px) {
+
+.card {
+  height: 300px;
+  width: 200px;
+}
+
+.card-temperature,
+.card-city {
+  font-size: 1em;
+}
+
+.card:not(:first-of-type) {
+  display: flex;
+}
+
+}
+
+@media all and (min-width: 1600px) {
+
+  .card {
+    height: 400px;
+    width: 320px;
+  }
+
+  .card-temperature,
+  .card-city {
+    font-size: 1.5em;
+  }
+
 }
