@@ -51,7 +51,8 @@ handleKeyPress = (e) => {
 }
 
 getForecast = () => {
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.inputValue}&mode=json&appid=9a5de275905fd24f70dc28cdf4d9d0c6&units=metric`
+  const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.inputValue}&mode=json&appid=${API_KEY}&units=metric`
   fetch(url)
   .then(response => {
     if (response.status == 401 || response.status == 404) {
