@@ -53,8 +53,14 @@ handleKeyPress = (e) => {
 getForecast = () => {
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.inputValue}&mode=json&appid=9a5de275905fd24f70dc28cdf4d9d0c6&units=metric`
   fetch(url)
-  .then(response => response.json())
-  .then(Json => this.setState({
+  .then(response => {
+    if (response.status == 401 || response.status == 404) {
+      alert('Invalid city name, please retry');
+    } else {
+      return response.json();
+    }
+  })
+  .then(Json =>  this.setState({
          city: Json.city,
          tempDayOne: Json.list[0].main,
          weatherDayOne: Json.list[0].weather[0],
