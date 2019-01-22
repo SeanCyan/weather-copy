@@ -7,7 +7,7 @@ class Search extends React.Component {
         return (
             <div className="search">
                 <label for="search-city">Input a city name & country code to get a forecast!</label>
-                <input type="text" className="search-city" onChange={this.props.updateInputValue} placeholder="e.g. Newcastle,GB" />
+                <input type="text" className="search-city" onChange={this.props.updateInputValue} onKeyPress={this.props.handleKeyPress} placeholder="e.g. Newcastle,GB" />
                 <button className="get-weather" onClick={this.props.getForecast}>Get Weather!</button>
             </div>
         );

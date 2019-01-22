@@ -44,6 +44,12 @@ updateInputValue = (e) => {
     });
 }
 
+handleKeyPress = (e) => {
+  if (e.key == 'Enter') {
+    this.getForecast();
+  }
+}
+
 getForecast = () => {
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.inputValue}&mode=json&appid=9a5de275905fd24f70dc28cdf4d9d0c6&units=metric`
   fetch(url)
@@ -83,6 +89,7 @@ getForecast = () => {
         inputValue={this.state.inputValue}
         updateInputValue={this.updateInputValue}
         getForecast={this.getForecast}
+        handleKeyPress={this.handleKeyPress}
         />
         <Panel 
           city={this.state.city}

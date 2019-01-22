@@ -10,6 +10,12 @@
     width: 100%;
   }
 
+  @supports (-ms-ime-align:auto) {
+    .panel {
+      justify-content: space-around;
+    }
+   }
+
   .caption {
     font-size: 3em;
     color: #201b2b;
